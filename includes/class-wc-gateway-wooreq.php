@@ -256,7 +256,7 @@ class WC_Gateway_WooReq extends WC_WooReq_Payment_Gateway {
 			<div class="button-dropdown-container">
 				<button id="request-payment-button">
 					<i class="payment-icon payment-icon--req-large"></i>
-					<span>Pay with Request</span> 
+					<span><?= __( 'Pay with Request', 'woocommerce-gateway-wooreq' ); ?></span> 
 				</button>
 
 				<?php
@@ -500,11 +500,11 @@ class WC_Gateway_WooReq extends WC_WooReq_Payment_Gateway {
 		<ul class="woocommerce-order-overview woocommerce-thankyou-order-details order_details">
 
 				<li class="woocommerce-order-overview__date date">
-					Total Sent in <?= $currency ?>:					<strong><?= $total_owed ?></strong>
+					<?= __('Total Sent in', 'woocommerce-gateway-wooreq').' '.$currency; ?>:					<strong><?= $total_owed ?></strong>
 				</li>
 
 				<li class="woocommerce-order-overview__email email">
-				<?= $currency ?> Conversion Rate:				<strong><?= $value ?></strong>
+				<?= $currency.' '.__('Conversion Rate:', 'woocommerce-gateway-wooreq'); ?>				<strong><?= $value ?></strong>
 				</li>
 
 				<?php 
@@ -520,11 +520,11 @@ class WC_Gateway_WooReq extends WC_WooReq_Payment_Gateway {
 				?>
 
 				<li class="woocommerce-order-overview__order order">
-					Transaction ID:						<strong><?= $txid_url ?></strong>
+					<?= __('Transaction-ID:', 'woocommerce-gateway-wooreq').' '; ?>						<strong><?= $txid_url ?></strong>
 				</li>
 				
 				<li class="woocommerce-order-overview__total total">
-					<?= $currency ?> Conversion Time:				<strong><?= $conversion_time ?></strong>
+					<?= $currency.' '.__('Conversion Time:', 'woocommerce-gateway-wooreq'); ?>				<strong><?= $conversion_time ?></strong>
 				</li>
 				
 			</ul>
